@@ -1,0 +1,43 @@
+{
+  "groups": [
+    {
+      "name": "app.security",
+      "type": "com.Campus.Campus.security.config.SecurityConfig",
+      "sourceType": "com.Campus.Campus.configuration.WebSecurityConfiguration",
+      "sourceMethod": "public com.Campus.Campus.security.config.SecurityConfig securityConfig() "
+    },
+    {
+      "name": "app.security.configuration",
+      "type": "com.Campus.Campus.security.util.TokenGenerator",
+      "sourceType": "com.Campus.Campus.configuration.WebSecurityConfiguration",
+      "sourceMethod": "public com.Campus.Campus.security.util.TokenGenerator tokenGenerator(com.Campus.Campus.security.config.SecurityConfig) "
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.security.access-token-expiry",
+      "type": "java.time.Duration",
+      "description": "Duration for access token expiry",
+      "sourceType": "com.Campus.Campus.security.config.SecurityConfig"
+    },
+    {
+      "name": "app.security.refresh-token-expiry",
+      "type": "java.time.Duration",
+      "description": "Duration for refresh token expiry",
+      "sourceType": "com.Campus.Campus.security.config.SecurityConfig"
+    },
+    {
+      "name": "app.security.token-generator-password",
+      "type": "java.lang.String",
+      "description": "Password for the token generator - cannot be null and must be exactly 16 ASCII characters",
+      "sourceType": "com.Campus.Campus.security.config.SecurityConfig"
+    },
+    {
+      "name": "app.security.token-generator-salt",
+      "type": "java.lang.String",
+      "description": "Salt for the token generator - cannot be null and must be exactly 16 digit hexadecimal",
+      "sourceType": "com.Campus.Campus.security.config.SecurityConfig"
+    }
+  ],
+  "hints": []
+}
